@@ -1,5 +1,4 @@
-var promt = require('prompt-sync');
-var Prompt = promt()
-let name = Prompt("Enter your name ?");
+var prompt = require('prompt-sync')();
 
-console.log("Welcome",name);
+let name = prompt("Enter your name ?");
+

@@ -1,0 +1,397 @@
+body,html 
+{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    background-color: #121B22;
+}
+
+.whatsapp-main
+{
+    font-family: "Roboto",sans-serif;
+    width:100%;
+    height:100vh;
+    box-sizing: border-box;
+}
+
+.whatsapp-main > .header 
+{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    background-color: #1F2C34;
+    color:white;
+
+}
+
+.header > .top-header 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header > .title 
+{
+    font-size: 1.125rem;
+    font-family: "Roboto",sans-serif;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.top-header > .actions-container
+{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.actions-container  > .action-icon 
+{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin:1rem .5rem;
+}
+
+.action-icon > img 
+{
+    width:1.5rem;
+    height: 1.5rem;
+
+}
+
+.header > .bottom-header 
+{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+
+
+
+
+.bottom-header > .header-item 
+{
+    flex-grow:1;
+    flex-shrink: 0;
+    padding:1rem;
+    font-size: .875rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color:#8A98A3;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-header > .header-item.active
+{
+    border-bottom: 4px solid #05B087;
+    display: flex;
+    
+}
+
+.bottom-header > .header-item.active > .page-title  
+{
+    color:#05B087;
+}
+
+.bottom-header > .header-item.active > .bubble 
+{
+    background-color: #05B087;
+    color:#1F2C34;
+}
+
+.bottom-header > .header-item > .page-title 
+{
+    font-size: 'Roboto',san-serif;
+    font-weight: 500;
+    color:#8A98A3;
+}
+
+.bottom-header > .header-item > .bubble 
+{
+    width: 1.125rem;
+    height:1.125rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #8A98A3;
+    border-radius: 50%;
+    font-size: .5rem;
+    margin-left:.25rem;
+    color:white;
+
+}
+
+.bottom-header > .header-item > .bubble.sm 
+{
+    width:.5rem;
+    height: .5rem;
+}
+
+.bottom-header > .groups-icon-holder 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow:0;
+    flex-shrink: 1;
+}
+
+.groups-icon-holder > .icon.active 
+{
+
+}
+
+
+.groups-icon-holder > .icon.active > svg
+{
+    fill:#05B087;
+}
+
+.groups-icon-holder > .icon 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.groups-icon-holder > .icon > svg
+{
+    width:1.5rem;
+    height: 1.5rem;
+    fill:#8A98A3;
+}
+
+.page-body
+{
+    display: flex;
+    flex-direction: column;
+
+    width:100%;
+}
+
+
+.page-body > #chat-list
+{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    
+    background-color: #121B22;
+
+}
+
+
+
+
+#chat-list > .chat-list-item 
+{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width:100%;
+    
+}
+
+#chat-list > .chat-list-item.hide
+{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+
+    display: none;
+    
+}
+
+#chat-list > .chat-list-item.receive .read-receipts
+{
+    display: none;
+}
+
+#chat-list > .chat-list-item.sent .bubble
+{
+    display: none;
+}
+
+.chat-list-item > .avatar-holder
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+    box-sizing: border-box;
+}
+
+.avatar-holder > .avatar 
+{
+    background-image: url("../img/whatsapp/user-avatarjpg.jpg");
+    background-size: cover;
+    width:3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #1F2C34;
+    background-position: center;
+
+}
+
+.chat-list-item > .info-holder
+{
+    flex-grow: 1;
+    flex-shrink: 0;
+    
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding:1rem;
+    padding-left:0;
+    padding-top:1.5rem;
+}
+
+.chat-list-item > .info-holder > .top 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
+
+.info-holder > .top >.user-name 
+{
+    flex-grow: 1;
+    flex-shrink: 0;
+    color: white;
+}
+
+.info-holder > .top >.time
+{
+    flex-grow: 0;
+    color:#ffff;
+    flex-shrink: 1;
+    font-size: .875rem;
+}
+
+.chat-list-item> .info-holder > .bottom
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:.5rem 0;
+}
+
+.info-holder > .bottom > .msg-content
+{
+    font-size:.875rem;
+    color:#8A98A3;
+    font-weight: 300;
+    font-family: "Roboto",sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.info-holder > .bottom > .msg-content.unread
+{
+    color: #8A98A3;
+}
+
+.chat-list-item.receive .info-holder > .bottom > .msg-content.unread
+{
+    color: #ffffff;
+}
+
+#chat-item.sen .info-holder > .bottom > .msg-content.unread
+{
+    color: #8A98A3;
+}
+
+.msg-content > .read-receipts 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg-content > .read-receipts.vanish
+{
+    display: none;
+}
+
+.msg-content > .read-receipts > .icon
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg-content > .read-receipts > .icon > svg
+{
+    fill:aqua;
+    width:1.25rem;
+    height: 1.25rem;
+}
+
+
+.msg-content.unread > .read-receipts > .icon > svg
+{
+    fill:#8A98A3;
+    width:1.25rem;
+    height: 1.25rem;
+}
+
+.info-holder > .bottom > .msg-status
+{
+
+}
+
+.bottom > .msg-status > .bubble 
+{
+    background-color: #05B087;
+    width:1.125rem;
+    height: 1.125rem;
+    border-radius: 50%;
+    color:#121B22;
+    font-size: .5rem;
+    font-weight: 500;
+    display: flex;
+    font-family: 'Roboto',sans-serif;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.bottom > .msg-status > .bubble.vanish
+{
+    display: none;
+}
+
+.bottom > .msg-status > .bubble > .count
+{
+   
+    color:#121B22;
+    font-size: .65rem;
+    font-weight: 500;
+}
+
