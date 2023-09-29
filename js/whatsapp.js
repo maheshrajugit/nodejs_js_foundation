@@ -52,7 +52,9 @@ $(document).ready()
                  },
                 ]
 
+    page_select(active_index);
     addChats();
+    
 
     function page_select(index)
     {
@@ -63,6 +65,37 @@ $(document).ready()
         $(selector).removeClass("active");
         console.log($(selector));
         active_index = index;
+
+
+        if(active_index==1)
+        {
+            $("#chat-list").addClass("hide");
+            $("#status-container").addClass("hide");
+            $("#calls-container").addClass("hide");
+            $("#groups-container").removeClass("hide");
+        }
+        else if(active_index==2)
+        {
+            $("#chat-list").removeClass("hide");
+            $("#status-container").addClass("hide");
+            $("#calls-container").addClass("hide");
+            $("#groups-container").addClass("hide");
+        }
+        else if(active_index==3)
+        {
+            $("#chat-list").addClass("hide");
+            $("#status-container").removeClass("hide");
+            $("#calls-container").addClass("hide");
+            $("#groups-container").addClass("hide");
+        }
+        else if(active_index==4)
+        {
+            $("#chat-list").addClass("hide");
+            $("#status-container").addClass("hide");
+            $("#calls-container").removeClass("hide");
+            $("#groups-container").addClass("hide");
+        }
+
     }
 
     function addChats()

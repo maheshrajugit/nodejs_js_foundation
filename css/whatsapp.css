@@ -207,15 +207,12 @@ body,html
     
 }
 
-#chat-list > .chat-list-item.hide
+.hide 
 {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-
     display: none;
-    
 }
+
+
 
 #chat-list > .chat-list-item.receive .read-receipts
 {
@@ -225,6 +222,16 @@ body,html
 #chat-list > .chat-list-item.sent .bubble
 {
     display: none;
+}
+
+#chat-list.hide
+{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+
+    display: none;
+    
 }
 
 .chat-list-item > .avatar-holder
