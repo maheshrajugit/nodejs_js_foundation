@@ -14,7 +14,7 @@ $(document).ready()
                         time:'23:51',
                         content:"ekkada ra",
                         r_status:"unread",
-                        count:1
+                        count:2
                     }
                  },
                  {
@@ -50,10 +50,74 @@ $(document).ready()
                         count:1
                     }
                  },
+                 {
+                    user_name:"Gowtham",
+                    avatar_url:"https://i.pinimg.com/736x/34/e1/41/34e1410ac3adbf1bd3809b3e088749e0.jpg",
+                    type:"receive",
+                    msg:{
+                        time:'19:51',
+                        content:"HappyBirthday  &#127874;",
+                        r_status:"unread",
+                        count:3
+                    }
+                 },
                 ]
+
+    var callsDB = [
+        {
+            name:"Raja",
+            time:"Today, 17:11",
+            type:"missed",
+            avatar:"../img/whatsapp/user-avatarjpg.jpg"
+        },
+        {
+            name:"gowtham",
+            time:"Today, 19:21",
+            type:"outgoing",
+            avatar:"https://i.pinimg.com/736x/34/e1/41/34e1410ac3adbf1bd3809b3e088749e0.jpg"
+        },
+        {
+            name:"gowtham",
+            time:"Today, 19:14",
+            type:"incomming",
+            avatar:"https://i.pinimg.com/736x/34/e1/41/34e1410ac3adbf1bd3809b3e088749e0.jpg"
+        },
+    ]
 
     page_select(active_index);
     addChats();
+    addCalls();
+
+
+    function addCalls()
+    {
+
+        callsDB.forEach((call_obj)=>{
+            let final = createCallsTile(call_obj);
+            $("#calls-list-holder").append(final);
+        });
+
+
+    }
+
+    function createCallsTile(obj)
+    {
+        let template = '<div class="create-call-tile calls-tile"><div class="left">'+
+          '<div style="background-image:url(\''+obj.avatar+'\')" class="icon">'+
+          '</div></div><div class="right"><div class="title">'+
+            obj.name+
+          '</div><div class="desc">'+
+          '<span>'+ 
+          '<svg class="'+obj.type+'"'+
+          ' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M4 12L8 8M4 12L8 16" '+
+          'stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>'+
+          
+            obj.time+ '</span>'+
+          '</div></div><div class="right-end"><div class="icon">'+
+            '<img src="./img/whatsapp/call-icon.svg" alt="call">'+
+          '</div></div></div>';
+        return template;
+    }
     
 
     function page_select(index)

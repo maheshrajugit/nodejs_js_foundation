@@ -12,13 +12,16 @@ let Users_obj = [
         age:25,
         email:"adityanakka07@gmail.com",
         password:"pass@123"
+    },
+    {
+        name:"Gowtham",
+        age:23,
+        email:"gowthammarisetty1705@gmail.com",
+        password:"p@ssword"
     }
 ];
 
-
-ask_login_creds();
-
-
+ask_login_creds();  //call
 
 function ask_login_creds()
 {
@@ -26,7 +29,7 @@ function ask_login_creds()
 
     let found_user;
     Users_obj.forEach((user)=>{
-        let found = undefined;
+        
         if(email_inp==user.email)
         {
             found_user = user;
@@ -40,7 +43,7 @@ function ask_login_creds()
 
     if(found_user!=undefined)
     {
-        let pass_inp = prompt("Enter password");
+        let pass_inp = prompt("Enter password : ");
         if(pass_inp == found_user.password)
         {
             console.log("Welcome, ",found_user.name);

@@ -4,7 +4,7 @@ let guess = 0;    //global variable declaration
 let attempts= 10;  //global variable
 
 let levels = ["Easy","Hard","Difficult"];
-let attempts_level = [100,10,5];
+let attempts_level = [100,15,10];
 
 var players = [];
 
@@ -12,22 +12,8 @@ let opt=0;
 
 console.log("Guess The Number \n -----------------");
 
-select_level();
+select_level();   //function call
 choose_players();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -49,7 +35,7 @@ function choose_players()
     }
     else if(opt == '2')
     {
-        take_names(opt)
+        take_names(opt);
         player1_start_game();   //function call
         start_game(); 
 
@@ -67,7 +53,7 @@ function take_names(option)
     let name = prompt("Enter Player 1 name : ");
     players.push(name);
     
-    if(opt=='2')
+    if(option=='2')
     {
         players.push(prompt("Enter Player 2 name : "))
     }
@@ -80,7 +66,7 @@ function select_level()         //ES5 TypeScript function declaration  //arrow f
 {
     console.log("Choose Level : \n");
     levels.forEach((item,index)=>{
-        console.log(""+(index+1)+". "+levels[index]);
+        console.log(""+(index+1)+". "+item);
     })
     opt = prompt("select\t: ");
     attempts = attempts_level[parseInt(opt)-1]
@@ -118,7 +104,7 @@ function start_game()    //function defination
     
         if(player2_input == guess)
         {
-            if(opt=='1')
+            if(players[1]=undefined)
             console.log(players[0]+" won!!!");
             else(opt=='2')
             console.log(players[1]+" won!!!");

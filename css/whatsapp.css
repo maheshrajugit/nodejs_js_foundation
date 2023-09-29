@@ -243,6 +243,7 @@ body,html
     padding:1rem;
     flex-grow: 0;
     flex-shrink: 1;
+    padding-bottom: 0;
     box-sizing: border-box;
 }
 
@@ -269,6 +270,7 @@ body,html
     box-sizing: border-box;
     padding:1rem;
     padding-left:0;
+    padding-bottom: 0;
     padding-top:1.5rem;
 }
 
@@ -411,4 +413,239 @@ body,html
     font-size: .65rem;
     font-weight: 500;
 }
+
+
+
+/* calls container */
+
+.page-body > #calls-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    align-items: flex-start;
+}
+
+.page-body > #calls-container.hide{
+
+    display: none;
+   
+}
+
+#calls-container > .create-call-tile 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.create-call-tile > .left 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    flex-shrink: 1;
+    flex-grow: 0;
+
+}
+
+.create-call-tile > .left > .icon 
+{
+    width:3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #05B087;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.create-call-tile > .left > .icon > img 
+{
+    width:1.5rem;
+    height: 1.5rem;
+}
+
+.create-call-tile > .right 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+
+.create-call-tile > .right > .title 
+{
+    color:#ffffff;
+    font-size: 1rem;
+    padding:.25rem 0;
+}
+
+.create-call-tile > .right > .desc 
+{
+    color:#8A98A3;
+    font-size: .875rem;
+    padding:0;
+}
+
+
+.recents-list-container 
+{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    box-sizing: border-box;
+}
+
+.recents-list-container  > .h5
+{
+    font-size: 1rem;
+    text-transform: capitalize;
+    color:#ffffff; 
+    font-family: 'Roboto',sans-serif;
+    font-weight:500;
+    padding:1rem;  
+}
+
+.recents-list-container > .calls-list
+{
+    width:100%;
+    box-sizing: border-box;   
+}
+
+.calls-list > .create-call-tile.calls-tile
+{
+
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    box-sizing: border-box;
+}
+
+.recents-list-container > .calls-list> .create-call-tile > .left > .icon 
+{
+    width:3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #05B087;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+}
+
+
+.recents-list-container > .calls-list> .create-call-tile > .left > .icon  > img
+{
+    width:3rem;
+    height: 3rem;
+    border-radius: 50%;
+    
+}
+.recents-list-container > .calls-list> .create-call-tile > .right >.desc 
+{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+.recents-list-container > .calls-list> .create-call-tile > .right >.desc>  span{
+    
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.recents-list-container > .calls-list> .create-call-tile > .right >.desc>  span > svg.incomming{
+    width:1.5rem;
+    height: 1.5rem;
+    transform: rotate(-45deg);
+}
+
+.recents-list-container > .calls-list> .create-call-tile > .right >.desc>  span > svg.missed{
+    width:1.5rem;
+    height: 1.5rem;
+    transform: rotate(-45deg);
+    
+}
+
+.recents-list-container > .calls-list> .create-call-tile > .right >.desc>  span > svg.outgoing{
+    width:1.5rem;
+    height: 1.5rem;
+    transform: rotate(135deg);
+    
+}
+
+svg.incomming  path, svg.outgoing  path 
+{
+    stroke: #05B087;
+}
+
+svg.missed  path
+{
+    stroke:red;
+}
+
+
+
+.create-call-tile.calls-tile > .right-end 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 1rem;
+    
+}
+
+.create-call-tile.calls-tile > .right-end > .icon 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.create-call-tile.calls-tile > .right-end > .icon >img 
+{
+    width:1.5rem;
+    height: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
