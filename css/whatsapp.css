@@ -283,9 +283,19 @@ body,html
 .info-holder > .top >.time
 {
     flex-grow: 0;
-    color:#ffff;
+    color:#8A98A3;
+
     flex-shrink: 1;
-    font-size: .875rem;
+    font-size: .75rem;
+}
+
+.chat-list-item.receive .info-holder > .top >.time
+{
+    flex-grow: 0;
+    color:#05B087;
+
+    flex-shrink: 1;
+    font-size: .75rem;
 }
 
 .chat-list-item> .info-holder > .bottom
